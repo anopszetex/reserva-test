@@ -14,7 +14,8 @@
 		<div class="box-single-horario">
 			<div class="box-single-wraper">
 				Nome: <?= $value['nome'].'<br/>'; ?>
-				Data e Horário: <?= date('d/m/Y H:i', strtotime($value['horario'])); ?>
+				Data e Horário: <?= date('d/m/Y H:i', strtotime($value['horario'])).'<br />'; ?>
+				<a href="?excluir=<?= $value['id']; ?>">Excluir</a>
 			</div><!--box-single-wraper-->
 		</div><!--box-single-horario-->
 		<?php } } ?>
