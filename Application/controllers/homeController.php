@@ -47,6 +47,13 @@
 		}
 
 		public function reservas() {
+			if(isset($_GET['excluir'])) {
+				$id = (int)$this->checkInput($_GET['excluir']);
+				if(!empty($id)) {
+					$this->delete('tb_agenda', $id);
+					$this->redirect(base_url);
+				}
+			}
 			$this->view->render('reservas-atuais', ['model' => $this], 'headerAdmin', null);
 		}
 

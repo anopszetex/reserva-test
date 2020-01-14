@@ -9,7 +9,7 @@
 	<div class="center">
 		<?php 
 			foreach($infoReserva as $key => $value) { 
-				if(strtotime($value['horario']) > time()) {
+				//if(strtotime($value['horario']) > time()) {
 		?>
 		<div class="box-single-horario">
 			<div class="box-single-wraper">
@@ -18,7 +18,7 @@
 				<a href="?excluir=<?= $value['id']; ?>">Excluir</a>
 			</div><!--box-single-wraper-->
 		</div><!--box-single-horario-->
-		<?php } } ?>
+		<?php /*}*/ } ?>
 		<div class="clear"></div><!--clear-->
 	</div><!--agendamentos-->
 </section>
