@@ -10,13 +10,7 @@
 		function __construct() {
 			$this->bd = new MySql();
 		}
-
-		public function loggout() {
-			$_SESSION = array();
-			session_unset();
-			session_destroy();
-		}
-
+		
 		public function redirect($url) {
 			echo '<script>location.href = "'.$url.'"</script>';
 			die();
