@@ -51,11 +51,11 @@
 		}
 
 		public function delete($table, $idUsuario = false) {
-			if(!$idUsuario) {
-				$stmt = $this->bd->connect()->prepare("DELETE * FROM `{$table}`");
+			if($idUsuario == false) {
+				$stmt = $this->bd->connect()->prepare("DELETE FROM `{$table}`");
 				$stmt->execute();
 			} else {
-				$stmt = $this->bd->connect()->prepare("DELETE * FROM `{$table}` WHERE id = ?");
+				$stmt = $this->bd->connect()->prepare("DELETE FROM `{$table}` WHERE id = ?");
 				$stmt->execute(array($idUsuario));
 			}
 		}
